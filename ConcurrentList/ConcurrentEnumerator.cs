@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace ConcurrentList
+namespace Samael.Collections
 {
     internal class ConcurrentEnumerator<T> : IEnumerator<T>
     {
         private readonly ReaderWriterLockSlim _lock;
         private readonly IEnumerator<T> _enumerator;
 
-        public ConcurrentEnumerator(IEnumerable<T>source, ReaderWriterLockSlim @lock)
+        public ConcurrentEnumerator(IEnumerable<T> source, ReaderWriterLockSlim @lock)
         {
             _lock = @lock;
             _lock.EnterReadLock();

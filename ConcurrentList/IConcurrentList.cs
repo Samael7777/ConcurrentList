@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConcurrentList
+namespace Samael.Collections
 {
     public interface IConcurrentList<T> : IList<T>
     {
